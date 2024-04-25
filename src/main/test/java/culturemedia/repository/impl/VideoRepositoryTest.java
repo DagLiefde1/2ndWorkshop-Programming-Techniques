@@ -47,7 +47,7 @@ class VideoRepositoryTest {
 
     @Test
     void when_FindByDuration_only_videos_between_the_range_should_be_returned_successfully() {
-        List<Video> videos = videoRepository.find( 4.0, 5.5 );
+        List<Video> videos = videoRepository.find( 4.5, 5.5 );
         assertEquals(3, videos.size());
     }
 

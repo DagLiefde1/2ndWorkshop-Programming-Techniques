@@ -5,11 +5,16 @@ import java.util.List;
 
 import culturemedia.model.View;
 import culturemedia.repository.ViewRepository;
+
+
 public class ViewRepositoryImpl implements ViewRepository{
+
     private final List<View> views;
+
     public ViewRepositoryImpl() {
         this.views = new ArrayList<>();
     }
+
     @Override
     public View save(View view) {
         this.views.add( view );

@@ -1,13 +1,11 @@
 package culturemedia.controllers;
 
-import culturemedia.exception.CultureMediaException;
 import culturemedia.exception.VideoNotFoundException;
 import culturemedia.repository.impl.VideoRepositoryImpl;
 import culturemedia.repository.impl.ViewRepositoryImpl;
 import culturemedia.service.CultureMediaService;
 import culturemedia.service.impl.CultureMediaServiceImpl;
 import culturemedia.model.Video;
-import culturemedia.service.impl.CultureMediaServiceImpl;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

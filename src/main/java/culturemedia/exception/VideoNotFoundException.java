@@ -8,7 +8,7 @@ public class VideoNotFoundException extends CultureMediaException {
     }
 
     public VideoNotFoundException(String title) {
-        super(MessageFormat.format("Invalid title for the video {0}", title));
+        super(MessageFormat.format("We were unable to find your video {0} ", title));
     }
 
 }

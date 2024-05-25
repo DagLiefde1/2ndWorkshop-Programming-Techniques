@@ -6,15 +6,17 @@ import culturemedia.repository.impl.ViewRepositoryImpl;
 import culturemedia.service.CultureMediaService;
 import culturemedia.service.impl.CultureMediaServiceImpl;
 import culturemedia.model.Video;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 import java.util.List;
 
+
 @RestController
+
+@RequestMapping("videos")
+
+@CrossOrigin(origins = "*")
 public class CultureMediaController {
 
 	private final CultureMediaService cultureMediaService;
@@ -29,7 +31,7 @@ public class CultureMediaController {
     }
 
     @GetMapping
-    public List <Video> find_allVideos(){
+    public List <Video> findAllVideos(){
         try {
             return cultureMediaService.findAll();
         }
@@ -37,5 +39,6 @@ public class CultureMediaController {
     }
 
     @PostMapping
-    public Video add_video(@RequestBody Video video){return cultureMediaService.save(video);}
+    public Video addVideo(@RequestBody Video video){return cultureMediaService.save(video);}
+
 }
